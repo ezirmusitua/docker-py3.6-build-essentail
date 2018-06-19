@@ -1,0 +1,23 @@
+FROM alpine:3.6
+
+ENV SSR_URL https://github.com/shadowsocksr-backup/shadowsocksr/archive/manyuser.zip
+
+sudo set -ex \
+&& sudo apk --update add --no-cache libsodium py-pip \
+&& sudo pip --no-cache-dir install https://github.com/shadowsocksr-backup/shadowsocksr/archive/manyuser.zip \
+&& sudo rm -rf /var/cache/apk
+
+ENV SERVER_ADDR $host
+ENV SERVER_PORT $port
+ENV PASSWORD    $pwd
+ENV METHOD      $method
+ENV PROTOCOL    $protocol
+ENV OBFS        $obfs
+ENV TIMEOUT     $timeout
+
+EXPOSE $SERVER_PORT/tcp
+EXPOSE $SERVER_PORT/udp
+
+WORKDIR /usr/bin/
+
+CMD ssserver -s $SERVER_ADDR -p 444 -k "Khshhksh0010?~" -m "aes-256-cfb" -O "auth_aes128_md5" -o "tls1.2_ticket_auth" -t 300
