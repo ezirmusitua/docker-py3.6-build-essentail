@@ -20,4 +20,10 @@ EXPOSE $SERVER_PORT/udp
 
 WORKDIR /usr/bin/
 
-CMD ssserver -s $SERVER_ADDR -p 444 -k "Khshhksh0010?~" -m "aes-256-cfb" -O "auth_aes128_md5" -o "tls1.2_ticket_auth" -t 300
+CMD ssserver -s $SERVER_ADDR \
+-p $SERVER_PORT \
+-k $PASSWORD    \
+-m $METHOD      \
+-O $PROTOCOL    \
+-o $OBFS        \
+-t $TIMEOUT
