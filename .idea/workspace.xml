@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="849b82a0-40dc-4bd0-aa06-e3ba6b3aee1a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dockerfiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dockerfiles.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-container/generate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/data-container/generate.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +24,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jupyter/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="260">
+              <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jupyter_notebook_config.prod.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jupyter/jupyter_notebook_config.prod.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -36,12 +46,12 @@
         <entry file="file://$PROJECT_DIR$/nginx-cerbot/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generate.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-container/generate.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="26">
@@ -55,6 +65,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="26">
               <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install-node-kernel.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jupyter/install-node-kernel.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -73,15 +92,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="130">
               <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autorenew.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nginx-cerbot/autorenew.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -127,9 +137,11 @@
         <option value="$PROJECT_DIR$/nginx-cerbot/cert.conf" />
         <option value="$PROJECT_DIR$/nginx-cerbot/init.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/jupyter/Dockerfile" />
         <option value="$PROJECT_DIR$/nginx-cerbot/Dockerfile" />
         <option value="$PROJECT_DIR$/data-container/generate.sh" />
+        <option value="$PROJECT_DIR$/jupyter/jupyter_notebook_config.prod.py" />
+        <option value="$PROJECT_DIR$/gatsby-node/Dockerfile" />
+        <option value="$PROJECT_DIR$/jupyter/Dockerfile" />
       </list>
     </option>
   </component>
@@ -162,7 +174,7 @@
             <path>
               <item name="dockerfiles" type="b2602c69:ProjectViewProjectNode" />
               <item name="dockerfiles" type="462c0819:PsiDirectoryNode" />
-              <item name="data-container" type="462c0819:PsiDirectoryNode" />
+              <item name="jupyter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -261,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529749303720</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Feat: update db container script">
+      <created>1529749780812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529749780812</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -333,7 +352,8 @@
     <MESSAGE value="Feat: add nginx cerbot image" />
     <MESSAGE value="Feat: add generate data container script" />
     <MESSAGE value="Feat: update jupyter config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: update jupyter config" />
+    <MESSAGE value="Feat: update db container script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: update db container script" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -511,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jupyter/install-node-kernel.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jupyter/install-zmq.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -584,20 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jupyter/jupyter_notebook_config.tmpl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jupyter/jupyter_notebook_config.prod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -608,14 +607,7 @@
     <entry file="file://$PROJECT_DIR$/nginx-cerbot/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jupyter/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -623,6 +615,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="86" selection-start-line="1" selection-start-column="86" selection-end-line="1" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter/jupyter_notebook_config.tmpl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatsby-node/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter/jupyter_notebook_config.prod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter/install-node-kernel.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
         </state>
       </provider>
     </entry>

@@ -8,7 +8,7 @@ RUN apt update -y &&\
     apt install -y apt-utils curl wget build-essential \
     git pkg-config automake autoconf python-software-properties \
     python3 python3-pip
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && apt install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && apt install -y nodejs npm
 
 COPY . src
 WORKDIR src
