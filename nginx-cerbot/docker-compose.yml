@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nginx-entry:
+    build: .
+    volumes:
+      - data__shared:/data
+    networks:
+      - nginx-entry
+
+volumes:
+  data_shared:
+    external: true
+
+networks:
+  nginx-entry:

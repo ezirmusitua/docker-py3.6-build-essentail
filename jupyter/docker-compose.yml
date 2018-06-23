@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  jupyter:
+    build: .
+    volumes:
+      - data__shared:/data
+
+volumes:
+  data_shared:
+    external: true
+
+networks:
+  nginx-entry:
+    external: true
