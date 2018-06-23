@@ -1,9 +1,9 @@
 FROM nginx:latest
 
-ENV DOMAINS "example.com,example.example.com"
+ENV DOMAINS "jferroal.com,www.jferroal.com"
 ENV CERT_WEBROOT "~/cert-webroot"
-ENV EMAIL "example@example.com"
-ENV NGINX_CONFIGS "volumes/path/to/nginx_configs"
+ENV EMAIL "jferroal@gmail.com"
+ENV NGINX_CONFIGS "/data/nginx-confs/*.conf"
 
 EXPOSE 22
 EXPOSE 80
@@ -13,8 +13,7 @@ EXPOSE 443
 
 RUN touch /etc/apt/sources.list.d/stretch-backports.list && \
     echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/stretch-backports.list &&\
-    apt update -y && apt upgrade -y && apt install -y -t stretch-backports python-certbot-nginx &&\
-    apt install -y openssh-server cron
+    apt update -y && apt upgrade -y && apt install -y -t stretch-backports python-certbot-nginx cron
 COPY . src
 WORKDIR src
 

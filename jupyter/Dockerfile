@@ -18,8 +18,8 @@ RUN python3 -m pip install jupyter pixiedust_node jupyter-c-kernel &&\
     install_c_kernel
 RUN bash install-node-kernel.sh
 RUN npm install -g --unsafe-perm --verbose ijavascript && ijsinstall
-
-CMD cd $START_PATH && jupyter notebook --config
+RUN mkdir ~/.jupyter && mv jupyter_notebook_config.prod.py ~/.jupyter/jupyter_notebook_config.py
+CMD cd $START_PATH && jupyter notebook --config ~/.jupyter/jupyter_notebook_config.py
 
 # uncomment following to run jupyter with command line
 ## sudo docker run --name jupyter -p 8080:8080 jupyter
