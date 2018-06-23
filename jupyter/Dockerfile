@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
-ENV CONFIG "/data/jupyter/jupyter_notebook_config.py"
+# The path to start notebook
+ENV START_PATH "~/jupyter-data/"
 
 RUN apt update -y &&\
     apt upgrade -y &&\
@@ -18,9 +19,7 @@ RUN python3 -m pip install jupyter pixiedust_node jupyter-c-kernel &&\
 RUN bash install-node-kernel.sh
 RUN npm install -g --unsafe-perm --verbose ijavascript && ijsinstall
 
-
-
-CMD jupyter notebook --config $CONFIG
+CMD cd $START_PATH && jupyter notebook --config
 
 # uncomment following to run jupyter with command line
 ## sudo docker run --name jupyter -p 8080:8080 jupyter
