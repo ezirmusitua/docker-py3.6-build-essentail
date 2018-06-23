@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 # The path to start notebook
-ENV START_PATH "~/jupyter-data/"
+ENV START_PATH "/data/jupyter/"
 
 RUN apt update -y &&\
     apt upgrade -y &&\
