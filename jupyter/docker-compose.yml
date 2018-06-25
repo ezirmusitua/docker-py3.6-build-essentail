@@ -4,8 +4,12 @@ services:
   jupyter:
     build: .
     volumes:
-      - data__shared:rw
+      - data__shared:/data
 
 networks:
   nginx-entry:
+    external: true
+
+volumes:
+  data__shared:
     external: true

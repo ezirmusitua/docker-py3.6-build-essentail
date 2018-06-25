@@ -3,8 +3,8 @@ version: '3'
 services:
   nginx-entry:
     build: .
-    volumes_from:
-      - data__shared:rw
+    volumes:
+      - data__shared:/data
     networks:
       - nginx-entry
 
