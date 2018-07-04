@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 # handling cert webroot nginx config and other conf
-sed -i 's/#domain-list#/$1/g' cert.conf
+sed -i 's/#domain#/$1/g' cert.conf
 mv cert.conf /etc/nginx/conf.d/
 sed -i '$d' /etc/nginx/nginx.conf
 sed -i '$a\ \ \ \ include '$4';' /etc/nginx/nginx.conf
 sed -i '$a}' /etc/nginx/nginx.conf
 
 # move cert-webroot to home
-mv cert-webroot ~
+mv cert-webroot /root/
 
 # reload nginx
 nginx -s reload
