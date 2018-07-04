@@ -10,3 +10,6 @@ services:
 
 networks:
   nginx-entry:
+volumes:
+  data__shared:
+    external: true
