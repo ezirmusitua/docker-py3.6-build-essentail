@@ -1,7 +1,7 @@
 FROM nginx:latest
 
 ENV DOMAINS "jferroal.com,www.jferroal.com"
-ENV CERT_WEBROOT "~/cert-webroot"
+ENV CERT_WEBROOT "/root/cert-webroot"
 ENV EMAIL "jferroal@gmail.com"
 ENV NGINX_CONFIGS "/data/nginx-confs/*.conf"
 
@@ -18,4 +18,4 @@ COPY . src
 WORKDIR src
 
 #CMD ["nginx", "-g", "daemon off;"]
-ENTRYPOINT bash ./init.sh $DOMAINS $CERT_WEBROOT $EMAIL $NGINX_CONFIGS
+ENTRYPOINT bash ./init.sh

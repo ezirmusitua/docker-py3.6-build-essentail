@@ -1,0 +1,2 @@
+# auto renew each month
+0 0 1 * * certbot renew >/dev/null 2>&1
