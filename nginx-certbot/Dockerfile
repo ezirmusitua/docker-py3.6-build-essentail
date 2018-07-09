@@ -1,10 +1,5 @@
 FROM nginx:latest
 
-ENV DOMAINS "jferroal.com,www.jferroal.com"
-ENV CERT_WEBROOT "/root/cert-webroot"
-ENV EMAIL "jferroal@gmail.com"
-ENV NGINX_CONFIGS "/data/nginx-confs/*.conf"
-
 EXPOSE 22
 EXPOSE 80
 EXPOSE 443
