@@ -9,8 +9,10 @@ nginx
 
 # exec cerbot
 certbot -n -d ezirmusitua.com,www.ezirmusitua.com\
-    --authenticator webroot  webroot-map = {"ezirmusitua.site,www.ezirmusitua.site":"/root/cert-webroot"}\
-    --installer nginx -m jferroal@gmail.com --agree-tos
+    --authenticator webroot\
+    --installer nginx -m jferroal@gmail.com --agree-tos\
+    --webroot-path "/root/cert-webroot"
+#--webroot-map {"ezirmusitua.site,www.ezirmusitua.site":"/root/cert-webroot"}\
 
 # add renew cert cron task
 crontab -u root autorenew.txt
