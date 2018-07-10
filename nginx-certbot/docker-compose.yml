@@ -7,6 +7,10 @@ services:
       - data__shared:/data
     networks:
       - nginx-entry
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3000:3000"
 
 networks:
   nginx-entry:
