@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-nginx
+nginx -g "daemon on;"
 
-cp nginx-confs/* /etc/nginx/conf.d/
+cp nginx-confs/http_** /etc/nginx/conf.d/
 
 # reload nginx
 nginx -s reload
@@ -10,8 +10,12 @@ nginx -s reload
 certbot -n -d ezirmusitua.site,www.ezirmusitua.site\
     --authenticator webroot\
     --installer nginx -m jferroal@gmail.com --agree-tos\
-    --webroot-path "/src/cert-webroot"
-#--webroot-map {"ezirmusitua.site,www.ezirmusitua.site":"/root/cert-webroot"}\
+    --webroot-path "/src/cert-webroot" --staging
+#--webroot-map {"ezirmusitua.site,www.ezirmusitua.site":"/src/cert-webroot"}\
+
+cp nginx-confs/https_** /etc/nginx/conf.d/
+
+nginx -s reload
 
 # add renew cert cron task
 crontab -u root autorenew.txt
