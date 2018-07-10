@@ -8,7 +8,7 @@ cp -r cert-webroot /root/
 nginx
 
 # exec cerbot
-certbot -n -d ezirmusitua.com,www.ezirmusitua.com\
+certbot -n -d ezirmusitua.site,www.ezirmusitua.site\
     --authenticator webroot\
     --installer nginx -m jferroal@gmail.com --agree-tos\
     --webroot-path "/root/cert-webroot"
