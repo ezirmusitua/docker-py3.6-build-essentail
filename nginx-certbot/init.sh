@@ -13,8 +13,6 @@ certbot -n -d ezirmusitua.site,www.ezirmusitua.site\
     --webroot-path "/src/cert-webroot" --staging
 #--webroot-map {"ezirmusitua.site,www.ezirmusitua.site":"/src/cert-webroot"}\
 
-cp nginx-confs/https_** /etc/nginx/conf.d/
-
 nginx -s reload
 
 # add renew cert cron task
