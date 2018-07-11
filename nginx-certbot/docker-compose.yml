@@ -5,6 +5,7 @@ services:
     build: .
     volumes:
       - data__shared:/data
+      - /opt/sites/:/opt/sites/
     networks:
       - nginx-entry
     ports:

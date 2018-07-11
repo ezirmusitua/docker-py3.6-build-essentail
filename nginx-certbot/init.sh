@@ -1,22 +1,18 @@
 #!/usr/bin/env bash
-nginx -g "daemon on;"
+# TODO: use config to start
+nginx -g "daemon on;" -c nginx.conf
 
-cp nginx-confs/http_** /etc/nginx/conf.d/
-
-# reload nginx
-nginx -s reload
-
-# exec cerbot
-certbot -n -d ezirmusitua.site,www.ezirmusitua.site\
-    --authenticator webroot\
-    --installer nginx -m jferroal@gmail.com --agree-tos\
-    --webroot-path "/src/cert-webroot" --staging
-#--webroot-map {"ezirmusitua.site,www.ezirmusitua.site":"/src/cert-webroot"}\
-
-nginx -s reload
+# exec certbot
+if [ -e /opt/sites/certificates/ ]
+then
+    # TODO: detect is cert exists
+    certbot -n -d <domains>\
+        --authenticator webroot\
+        --installer nginx -m <email> --agree-tos\
+        --webroot-path "/src/cert-webroot" --staging
+    #--webroot-map {"ezirmusitua.site,www.ezirmusitua.site":"/src/cert-webroot"}\
+    nginx -s reload
+fi
 
 # add renew cert cron task
 crontab -u root autorenew.txt
-
-# reload nginx
-nginx -s reload
