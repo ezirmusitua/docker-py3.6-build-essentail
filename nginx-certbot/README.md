@@ -1,0 +1,1 @@
+sudo docker exec nginx-demo bash ./sign.sh demo.site demo.site,www.demo.site demo@demo.com staging
