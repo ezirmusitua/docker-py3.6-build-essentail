@@ -23,4 +23,6 @@ else
     certbot -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot"
 fi
 
+mv /etc/letsencrypt/live/$domain_name /opt/sites/confs/
+
 nginx -s reload
