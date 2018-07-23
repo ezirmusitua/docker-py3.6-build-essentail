@@ -4,7 +4,6 @@ services:
   nginx-entry:
     build: .
     volumes:
-      - data__shared:/data
       - /opt/sites/:/opt/sites/
     networks:
       - nginx-entry
@@ -15,6 +14,3 @@ services:
 
 networks:
   nginx-entry:
-volumes:
-  data__shared:
-    external: true
