@@ -18,9 +18,9 @@ fi
 
 if [ "$env" == "staging" ]
 then
-    certbot -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/src/cert-webroot" --staging
+    certbot -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot" --staging
 else
-    certbot -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/src/cert-webroot"
+    certbot -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot"
 fi
 
 nginx -s reload
