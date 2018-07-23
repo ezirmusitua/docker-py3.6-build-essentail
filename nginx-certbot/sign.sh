@@ -4,7 +4,7 @@ domains=$2
 email=$3
 env=$4
 
-if [ ! -d "/opt/sites/confs/$domain_name.conf" ]
+if [ ! -e "/opt/sites/confs/$domain_name.conf" ]
 then
     echo "Nginx config not found ... "
     exit -1

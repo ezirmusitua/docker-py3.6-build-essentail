@@ -14,3 +14,4 @@ services:
 
 networks:
   nginx-entry:
+    external: true
