@@ -18,9 +18,9 @@ fi
 
 if [ "$env" == "staging" ]
 then
-    certbot certonly -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot" --staging
+    certbot certonly -n -d "$domains" --authenticator webroot -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot" --staging
 else
-    certbot certonly -n -d "$domains" --authenticator webroot --installer nginx -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot"
+    certbot certonly -n -d "$domains" --authenticator webroot -m "$email" --agree-tos --webroot-path "/opt/sites/cert-webroot"
 fi
 
 mv /etc/letsencrypt/live/$domain_name /opt/sites/live/
