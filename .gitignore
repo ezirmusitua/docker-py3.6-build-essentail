@@ -333,3 +333,4 @@ typings/
 .next
 
 *.prod.*
+.idea
